@@ -2,18 +2,24 @@
 
 try {
 
-  for (let i = 0; i <= 100; i++) {
-    let toStamp = i.toString();
-
-    if (toStamp.includes('3')) {
-      toStamp = toStamp.replace('3', 'Fizz');
-    }; 
-    
-    if (toStamp.includes('5')) {
-      toStamp = toStamp.replace('5', 'Buzz');
+  for (let i = 1; i <= 100; i++) {
+    if (!(i % 3) && !(i % 5)) {
+      console.log('FizzBuzz');
+      continue;
     };
 
-    console.log(toStamp);
+    if (!(i % 3)) {
+      toStamp = 'Fizz';
+      console.log('Buzz');
+      continue;
+    }; 
+    
+    if (!(i % 5)) {
+      console.log('Buzz');
+      continue;
+    };
+
+    console.log(i);
   };
 
 } catch(err) {
